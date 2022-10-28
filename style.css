@@ -1,0 +1,106 @@
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li .icon-facebook2 {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-linkedin{background: #00abf0;}
+	.social ul li .icon-tumblr2 {background: #d95232;}
+	.social ul li .icon-google2 {background: #ae181f;}
+	.social ul li .icon-mail {background: #666666;}
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?nd34u5');
+  src:  url('fonts/icomoon.eot?nd34u5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?nd34u5') format('truetype'),
+    url('fonts/icomoon.woff?nd34u5') format('woff'),
+    url('fonts/icomoon.svg?nd34u5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: nevers;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google2:before {
+  content: "\ea89";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-tumblr2:before {
+  content: "\eaba";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+/*slider*/
+.slider{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+.slider img{
+    width: 100%;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    
+    animation: cambio 15s infinite;
+    animation-direction: alternate;
+}
+@keyframes cambio {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
